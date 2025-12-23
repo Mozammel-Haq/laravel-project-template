@@ -69,6 +69,9 @@
     <script src="{{asset('dashboard/assets')}}/js/moment.min.js" type="text/javascript"></script>
     <script src="{{asset('dashboard/assets')}}/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
     <script src="{{asset('dashboard/assets')}}/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <!-- Datetimepicker JS -->
+    <script src="{{asset('dashboard/assets')}}/js/moment.min.js" type="3a68d12e02a3c1f0a6cad4fd-text/javascript"></script>
+    <script src="{{asset('dashboard/assets')}}/js/bootstrap-datetimepicker.min.js" type="3a68d12e02a3c1f0a6cad4fd-text/javascript"></script>
     <!-- Main JS -->
     <script src="{{asset('dashboard/assets')}}/js/script.js" type="text/javascript"></script>
 

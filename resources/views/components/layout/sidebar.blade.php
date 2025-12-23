@@ -5,17 +5,17 @@
             <div class="sidebar-logo">
                 <div>
                     <!-- Logo Normal -->
-                    <a href="index.html" class="logo logo-normal">
+                    <a href="{{route('dashboard.admin')}}" class="logo logo-normal">
                         <img src="assets/img/logo.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Small -->
-                    <a href="index.html" class="logo-small">
+                    <a href="{{route('dashboard.admin')}}" class="logo-small">
                         <img src="assets/img/logo-small.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="index.html" class="dark-logo">
+                    <a href="{{route('dashboard.admin')}}" class="dark-logo">
                         <img src="assets/img/logo-white.svg" alt="Logo">
                     </a>
                 </div>
@@ -89,9 +89,9 @@
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
-                                        <li><a href="index.html" class="active">Admin Dashboard</a></li>
-                                        <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
-                                        <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+                                        <li><a href="{{route('dashboard.admin')}}" class="{{ request()->is("dashboard/admin")?"active":"" }}">Admin Dashboard</a></li>
+                                        <li><a href="{{route('dashboard.doctor')}}"  class="{{ request()->is("dashboard/doctor")?"active":"" }}"  >Doctor Dashboard</a></li>
+                                        <li><a href="{{route('dashboard.patient')}}"  class="{{ Route::is("dashboard.patient")?"active":"" }}">Patient Dashboard</a></li>
                                     </ul>
                                 </li>
                                 <li class="submenu">
@@ -135,7 +135,7 @@
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
-                                        <li><a href="index.html">Default</a></li>
+                                        <li><a href="{{route('dashboard.admin')}}">Default</a></li>
                                         <li><a href="layout-mini.html">Mini</a></li>
                                         <li><a href="layout-hover-view.html">Hover View</a></li>
                                         <li><a href="layout-hidden.html">Hidden</a></li>
