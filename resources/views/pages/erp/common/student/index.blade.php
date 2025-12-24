@@ -1,7 +1,14 @@
-    <x-app-layout>
+   @php
+       dd($students)
+   @endphp
+   <x-app-layout>
 <div class="container mt-5">
     <div class="d-flex w-100 justify-content-between mb-4">
         <h4 class="mb-3">Students List</h4>
+        <form action="{{ route('students.index') }}" method="get" class="d-flex gap-2">
+            <input type="text" class="form-control" name="search" id="search" placeholder="search anything to filter data" value="{{ request('search') }}">
+            <button type="submit" class="btn btn-indigo">Search</button>
+        </form>
         <a href="{{ route('students.create') }}" class="btn btn-primary">Create Student</a>
     </div>
 
@@ -46,7 +53,7 @@
             </tbody>
         </table>
         <div class="mt-5">
-            {{ $students->links() }}
+            {{ $students->appends(request()->query())->links() }}
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Section;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -10,10 +11,17 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $students = Student::paginate(5);
-        return view('pages.erp.common.student.index',compact('students'));
+        $students = Student::with("section:id,name")->get();
+        // $students = Student::orderBy('id','desc')->paginate(5);
+        // $students = Student::when($request->search,function($query) use($request){
+        //     return $query->whereAny([
+        //         'name','email','address'
+        //     ],"LIKE","%".$request->search."%");
+        // })->orderBy('id','desc')->paginate(5);
+        // return view('pages.erp.common.student.index',compact('students'));
+        return $students;
     }
 
     /**
@@ -82,5 +90,4 @@ class StudentController extends Controller
         $students = Student::withTrashed()->find($id)->forceDelete();
         return redirect()->route('students.trash');
     }
-
 }
