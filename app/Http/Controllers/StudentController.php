@@ -13,15 +13,15 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-        $students = Student::with("section:id,name")->get();
+        // $students = Student::with("section:id,name")->get();
         // $students = Student::orderBy('id','desc')->paginate(5);
-        // $students = Student::when($request->search,function($query) use($request){
-        //     return $query->whereAny([
-        //         'name','email','address'
-        //     ],"LIKE","%".$request->search."%");
-        // })->orderBy('id','desc')->paginate(5);
-        // return view('pages.erp.common.student.index',compact('students'));
-        return $students;
+        $students = Student::when($request->search,function($query) use($request){
+            return $query->whereAny([
+                'name','email','address'
+            ],"LIKE","%".$request->search."%");
+        })->orderBy('id','desc')->paginate(5);
+        return view('pages.erp.common.student.index',compact('students'));
+        // return $students;
     }
 
     /**

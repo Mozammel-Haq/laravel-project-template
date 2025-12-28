@@ -1,6 +1,6 @@
-   @php
+   {{-- @php
        dd($students)
-   @endphp
+   @endphp --}}
    <x-app-layout>
 <div class="container mt-5">
     <div class="d-flex w-100 justify-content-between mb-4">
