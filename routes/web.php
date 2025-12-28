@@ -20,3 +20,7 @@ Route::prefix('practice')->group(function(){
 
     Route::resource('students',StudentController::class);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
