@@ -5,18 +5,18 @@
             <div class="sidebar-logo">
                 <div>
                     <!-- Logo Normal -->
-                    <a href="{{route('dashboard.admin')}}" class="logo logo-normal">
-                        <img src="assets/img/logo.svg" alt="Logo">
+                    <a href="{{ route('dashboard.admin') }}" class="logo logo-normal">
+                        <img src="{{ asset('assets') }}/img/logo.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Small -->
-                    <a href="{{route('dashboard.admin')}}" class="logo-small">
-                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    <a href="{{ route('dashboard.admin') }}" class="logo-small">
+                        <img src="{{ asset('assets') }}/img/logo-small.svg" alt="Logo">
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="{{route('dashboard.admin')}}" class="dark-logo">
-                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    <a href="{{ route('dashboard.admin') }}" class="dark-logo">
+                        <img src="{{ asset('assets') }}/img/logo-white.svg" alt="Logo">
                     </a>
                 </div>
                 <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn">
@@ -34,10 +34,13 @@
             <div class="sidebar-inner" data-simplebar>
                 <div id="sidebar-menu" class="sidebar-menu">
                     <div class="sidebar-top shadow-sm p-2 rounded-1 mb-3 dropend">
-                        <a href="javascript:void(0);" class="drop-arrow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                        <a href="javascript:void(0);" class="drop-arrow-none" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" data-bs-offset="0,22" aria-haspopup="false"
+                            aria-expanded="false">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <span class="avatar rounded-circle flex-shrink-0 p-2"><img src="assets/img/icons/trustcare.svg" alt="img"></span>
+                                    <span class="avatar rounded-circle flex-shrink-0 p-2"><img
+                                            src="{{ asset('assets') }}/img/icons/trustcare.svg" alt="img"></span>
                                     <div class="ms-2">
                                         <h6 class="fs-14 fw-semibold mb-0">Trustcare Clinic</h6>
                                         <p class="fs-13 mb-0">Lasvegas</p>
@@ -50,29 +53,37 @@
                             <div class="p-2">
                                 <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
                                     <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-01.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">CureWell Medical Hub<small class="d-block text-muted fw-normal fs-13">Ohio</small></span>
+                                        <span class="me-2"><img src="{{ asset('assets') }}/img/icons/clinic-01.svg"
+                                                alt=""></span>
+                                        <span class="fw-semibold text-dark">CureWell Medical Hub<small
+                                                class="d-block text-muted fw-normal fs-13">Ohio</small></span>
                                     </span>
                                     <input class="form-check-input m-0 me-2" type="checkbox">
                                 </label>
                                 <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
                                     <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-02.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">Trustcare Clinic<small class="d-block text-muted fw-normal fs-13">Lasvegas</small></span>
+                                        <span class="me-2"><img src="{{ asset('assets') }}/img/icons/clinic-02.svg"
+                                                alt=""></span>
+                                        <span class="fw-semibold text-dark">Trustcare Clinic<small
+                                                class="d-block text-muted fw-normal fs-13">Lasvegas</small></span>
                                     </span>
                                     <input class="form-check-input m-0 me-2" type="checkbox">
                                 </label>
                                 <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
                                     <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-03.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">NovaCare Medical<small class="d-block text-muted fw-normal fs-13">Washington</small></span>
+                                        <span class="me-2"><img src="{{ asset('assets') }}/img/icons/clinic-03.svg"
+                                                alt=""></span>
+                                        <span class="fw-semibold text-dark">NovaCare Medical<small
+                                                class="d-block text-muted fw-normal fs-13">Washington</small></span>
                                     </span>
                                     <input class="form-check-input m-0 me-2" type="checkbox">
                                 </label>
                                 <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
                                     <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-04.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">Greeny Medical Clinic<small class="d-block text-muted fw-normal fs-13">Illinios</small></span>
+                                        <span class="me-2"><img src="{{ asset('assets') }}/img/icons/clinic-04.svg"
+                                                alt=""></span>
+                                        <span class="fw-semibold text-dark">Greeny Medical Clinic<small
+                                                class="d-block text-muted fw-normal fs-13">Illinios</small></span>
                                     </span>
                                     <input class="form-check-input m-0 me-2" type="checkbox">
                                 </label>
@@ -89,9 +100,15 @@
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
-                                        <li><a href="{{route('dashboard.admin')}}" class="{{ request()->is("dashboard/admin")?"active":"" }}">Admin Dashboard</a></li>
-                                        <li><a href="{{route('dashboard.doctor')}}"  class="{{ request()->is("dashboard/doctor")?"active":"" }}"  >Doctor Dashboard</a></li>
-                                        <li><a href="{{route('dashboard.patient')}}"  class="{{ Route::is("dashboard.patient")?"active":"" }}">Patient Dashboard</a></li>
+                                        <li><a href="{{ route('dashboard.admin') }}"
+                                                class="{{ request()->is('dashboard/admin') ? 'active' : '' }}">Admin
+                                                Dashboard</a></li>
+                                        <li><a href="{{ route('dashboard.doctor') }}"
+                                                class="{{ request()->is('dashboard/doctor') ? 'active' : '' }}">Doctor
+                                                Dashboard</a></li>
+                                        <li><a href="{{ route('dashboard.patient') }}"
+                                                class="{{ Route::is('dashboard.patient') ? 'active' : '' }}">Patient
+                                                Dashboard</a></li>
                                     </ul>
                                 </li>
                                 <li class="submenu">
@@ -115,7 +132,8 @@
                                         <li><a href="contacts.html">Contacts</a></li>
                                         <li><a href="email.html">Email</a></li>
                                         <li class="submenu submenu-two">
-                                            <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                            <a href="#">Invoices<span
+                                                    class="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="invoice.html">Invoices</a></li>
                                                 <li><a href="invoice-details.html">Invoice Details</a></li>
@@ -135,7 +153,7 @@
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
-                                        <li><a href="{{route('dashboard.admin')}}">Default</a></li>
+                                        <li><a href="{{ route('dashboard.admin') }}">Default</a></li>
                                         <li><a href="layout-mini.html">Mini</a></li>
                                         <li><a href="layout-hover-view.html">Hover View</a></li>
                                         <li><a href="layout-hidden.html">Hidden</a></li>
@@ -634,7 +652,8 @@
                             <ul>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <i class="ti ti-chart-pie"></i><span>Base UI</span><span class="menu-arrow"></span>
+                                        <i class="ti ti-chart-pie"></i><span>Base UI</span><span
+                                            class="menu-arrow"></span>
                                     </a>
                                     <ul>
                                         <li><a href="ui-accordion.html">Accordion</a></li>
@@ -670,16 +689,17 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <i class="ti ti-radar"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                                        <i class="ti ti-radar"></i><span>Advanced UI</span><span
+                                            class="menu-arrow"></span>
                                     </a>
                                     <ul>
                                         <li><a href="extended-dragula.html">Dragula</a></li>
                                         <li><a href="ui-clipboard.html">Clipboard</a></li>
                                         <li><a href="ui-rangeslider.html">Range Slider</a></li>
                                         <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
-										<li><a href="ui-lightbox.html">Lightbox</a></li>
-										<li><a href="ui-rating.html">Rating</a></li>
-										<li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                                        <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                        <li><a href="ui-rating.html">Rating</a></li>
+                                        <li><a href="ui-scrollbar.html">Scrollbar</a></li>
                                     </ul>
                                 </li>
                                 <li class="submenu">
@@ -688,7 +708,8 @@
                                     </a>
                                     <ul>
                                         <li class="submenu submenu-two">
-                                            <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                            <a href="javascript:void(0);">Form Elements<span
+                                                    class="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
                                                 <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
@@ -699,7 +720,8 @@
                                             </ul>
                                         </li>
                                         <li class="submenu submenu-two">
-                                            <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                            <a href="javascript:void(0);">Layouts<span
+                                                    class="menu-arrow inside-submenu"></span></a>
                                             <ul>
                                                 <li><a href="form-horizontal.html">Horizontal Form</a></li>
                                                 <li><a href="form-vertical.html">Vertical Form</a></li>
@@ -714,7 +736,8 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <i class="ti ti-table-row"></i><span>Tables</span><span class="menu-arrow"></span>
+                                        <i class="ti ti-table-row"></i><span>Tables</span><span
+                                            class="menu-arrow"></span>
                                     </a>
                                     <ul>
                                         <li><a href="tables-basic.html">Basic Tables </a></li>
@@ -762,10 +785,13 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="https://preclinic.dreamstechnologies.com/documentation/html.html" target="_blank"><i class="ti ti-file-dots"></i><span>Documentation</span></a>
+                                    <a href="https://preclinic.dreamstechnologies.com/documentation/html.html"
+                                        target="_blank"><i class="ti ti-file-dots"></i><span>Documentation</span></a>
                                 </li>
                                 <li>
-                                    <a href="https://preclinic.dreamstechnologies.com/documentation/changelog.html" target="_blank"><i class="ti ti-status-change"></i><span>Changelog</span><span class="badge bg-danger ms-2 badge-md rounded-2 fs-12 fw-medium">v1.7.2</span></a>
+                                    <a href="https://preclinic.dreamstechnologies.com/documentation/changelog.html"
+                                        target="_blank"><i class="ti ti-status-change"></i><span>Changelog</span><span
+                                            class="badge bg-danger ms-2 badge-md rounded-2 fs-12 fw-medium">v1.7.2</span></a>
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
@@ -799,7 +825,7 @@
                 <div class="sidebar-footer border-top mt-3">
                     <div class="trial-item mt-0 p-3 text-center">
                         <div class="trial-item-icon rounded-4 mb-3 p-2 text-center shadow-sm d-inline-flex">
-                            <img src="assets/img/icons/sidebar-icon.svg" alt="img">
+                            <img src="{{ asset('assets') }}/img/icons/sidebar-icon.svg" alt="img">
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
