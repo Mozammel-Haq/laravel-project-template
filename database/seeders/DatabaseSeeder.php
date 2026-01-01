@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Student::factory(10)->create();
-        Section::factory(10)->create();
+        // Section::factory(10)->create();
+        $this->call([DefaultClinicUserSeeder::class]);
     }
 }
